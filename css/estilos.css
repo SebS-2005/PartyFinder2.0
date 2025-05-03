@@ -1,0 +1,7 @@
+nav a {
+    transition: color 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
