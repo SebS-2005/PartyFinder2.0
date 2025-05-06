@@ -26,9 +26,22 @@
   <div class="flex-1 ml-64 flex flex-col">
 
     <!-- Header -->
-    <header class="bg-purple-900 p-4 flex justify-between items-center shadow-md fixed w-[calc(100%-16rem)] z-10">
-      <h1 class="text-2xl font-bold">🎉 PartyFinder</h1>
-      <img src="./assets/images/profile.png" alt="Perfil" class="w-10 h-10 rounded-full object-cover">
+    <header class="bg-purple-900 p-4 flex justify-between items-center shadow-md fixed w-full z-10">
+      <!-- Izquierda: logo y nombre -->
+      <div class="flex items-center space-x-3">
+        <img src="./assets/images/icons/logo.png" alt="Logo" class="w-10 h-10">
+        <h1 class="text-2xl font-bold">PartyFinder</h1>
+      </div>
+    
+      <!-- Derecha: navegación -->
+      <nav class="flex items-center space-x-6">
+        <a href="#" class="text-white hover:text-purple-300 font-medium">Inicio</a>
+        <a href="#" class="text-white hover:text-purple-300 font-medium">Buscar</a>
+        <!-- Botón perfil -->
+        <button class="w-10 h-10 rounded-full overflow-hidden border-2 border-white">
+          <img src="./assets/images/profile.png" alt="Perfil" class="object-cover w-full h-full">
+        </button>
+      </nav>
     </header>
 
     <!-- Contenido Principal -->
