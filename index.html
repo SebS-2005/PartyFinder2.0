@@ -9,18 +9,7 @@
 </head>
 <body class="bg-gray-900 text-white flex">
 
-  <!-- Sidebar -->
-  <aside class="w-64 bg-gray-800 min-h-screen p-4 flex flex-col fixed">
-    <h2 class="text-2xl font-bold mb-6">Categorías</h2>
-    <nav class="mb-8 space-y-2">
-      <a href="#" class="block hover:text-purple-300">Techno</a>
-      <a href="#" class="block hover:text-purple-300">Reggaetón</a>
-      <a href="#" class="block hover:text-purple-300">House</a>
-      <a href="#" class="block hover:text-purple-300">Electro</a>
-    </nav>
-    <h2 class="text-2xl font-bold mb-4">Ranking</h2>
-    <div id="ranking" class="space-y-2"></div>
-  </aside>
+ 
 
   <!-- Main -->
   <div class="flex-1 ml-64 flex flex-col">
@@ -44,10 +33,40 @@
       </nav>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="p-6 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cardsContainer">
-      <!-- Cards dinámicas van acá -->
-    </main>
+    <div class="flex pt-20">
+      <!-- Sidebar izquierda -->
+      <aside class="w-64 bg-purple-800 text-white p-4 fixed h-full top-16">
+        <h2 class="text-xl font-bold mb-4">Categorías</h2>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-purple-300">Electrónica</a></li>
+          <li><a href="#" class="hover:text-purple-300">Latina</a></li>
+          <li><a href="#" class="hover:text-purple-300">Reggaetón</a></li>
+        </ul>
+    
+        <h2 class="text-xl font-bold mt-6 mb-4">Ranking</h2>
+        <ul class="space-y-2">
+          <li>#1 LUX Club</li>
+          <li>#2 Palco VIP</li>
+          <li>#3 360 Rooftop</li>
+        </ul>
+      </aside>
+    
+      <!-- Sección de cards -->
+      <main class="ml-64 p-6 grid grid-cols-3 gap-6 w-full">
+        <!-- Card -->
+        <div class="bg-white rounded-lg shadow hover:scale-105 transition-transform overflow-hidden">
+          <img src="./assets/images/club1.jpg" alt="Discoteca" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold">Lux Club</h3>
+            <p class="text-gray-600 text-sm">Zona T, Bogotá</p>
+          </div>
+        </div>
+    
+        <!-- Puedes duplicar más cards aquí -->
+    
+      </main>
+    </div>
+    
 
   </div>
 
