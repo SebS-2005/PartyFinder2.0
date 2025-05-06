@@ -1,7 +1,10 @@
-nav a {
-    transition: color 0.3s ease;
-  }
-  
-  button:hover {
-    transform: scale(1.05);
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}

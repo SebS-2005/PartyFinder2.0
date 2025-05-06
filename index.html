@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PartyFinder 🎉</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="css/estilos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilos.css">
 </head>
+<body class="bg-gray-900 text-white flex">
 
-<body class="bg-gray-900 text-white min-h-screen flex flex-col">
-
-  <!-- HEADER -->
-  <header class="bg-purple-900 shadow-md p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">🎉 PartyFinder</h1>
-    <nav class="space-x-4">
-      <a href="#" class="hover:text-purple-300 transition">Inicio</a>
-      <a href="#" class="hover:text-purple-300 transition">Explorar</a>
-      <a href="#" class="hover:text-purple-300 transition">Ranking</a>
-      <a href="#" class="hover:text-purple-300 transition">Perfil</a>
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gray-800 min-h-screen p-4 flex flex-col fixed">
+    <h2 class="text-2xl font-bold mb-6">Categorías</h2>
+    <nav class="mb-8 space-y-2">
+      <a href="#" class="block hover:text-purple-300">Techno</a>
+      <a href="#" class="block hover:text-purple-300">Reggaetón</a>
+      <a href="#" class="block hover:text-purple-300">House</a>
+      <a href="#" class="block hover:text-purple-300">Electro</a>
     </nav>
-  </header>
+    <h2 class="text-2xl font-bold mb-4">Ranking</h2>
+    <div id="ranking" class="space-y-2"></div>
+  </aside>
 
-  <!-- CONTENIDO -->
-  <main id="contenido" class="p-4"></main>
+  <!-- Main -->
+  <div class="flex-1 ml-64 flex flex-col">
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-800 text-center p-4 text-sm text-gray-400">
-    &copy; 2025 PartyFinder. Todos los derechos reservados.
-  </footer>
+    <!-- Header -->
+    <header class="bg-purple-900 p-4 flex justify-between items-center shadow-md fixed w-[calc(100%-16rem)] z-10">
+      <h1 class="text-2xl font-bold">🎉 PartyFinder</h1>
+      <img src="./assets/images/profile.png" alt="Perfil" class="w-10 h-10 rounded-full object-cover">
+    </header>
 
-  <!-- JS MÓDULOS -->
-  <script src="js/utils.js" defer></script>
-  <script src="js/cards.js" defer></script>
-  <script src="js/ranking.js" defer></script>
-  <script src="js/perfil.js" defer></script>
-  <script src="js/app.js" defer></script>
+    <!-- Contenido Principal -->
+    <main class="p-6 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cardsContainer">
+      <!-- Cards dinámicas van acá -->
+    </main>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/cards.js"></script>
+  <script src="./js/ranking.js"></script>
+
 </body>
 </html>
