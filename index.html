@@ -33,9 +33,9 @@
       </nav>
     </header>
 
-    <div class="flex pt-20">
-      <!-- Sidebar izquierda -->
-      <aside class="w-64 bg-purple-800 text-white p-4 fixed h-full top-16">
+    <div class="flex pt-16 h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-purple-800 text-white p-4 h-full sticky top-16">
         <h2 class="text-xl font-bold mb-4">Categorías</h2>
         <ul class="space-y-2">
           <li><a href="#" class="hover:text-purple-300">Electrónica</a></li>
@@ -44,26 +44,34 @@
         </ul>
     
         <h2 class="text-xl font-bold mt-6 mb-4">Ranking</h2>
-        <ul class="space-y-2">
-          <li>#1 LUX Club</li>
-          <li>#2 Palco VIP</li>
-          <li>#3 360 Rooftop</li>
-        </ul>
-      </aside>
+        <div class="space-y-4">
+          <!-- Ranking con barras -->
+          <div>
+            <span class="block font-semibold">#1 Lux Club</span>
+            <div class="w-full bg-purple-900 rounded-full h-2.5 mt-1">
+              <div class="bg-green-400 h-2.5 rounded-full" style="width: 90%;"></div>
+            </div>
+          </div>
     
-      <!-- Sección de cards -->
-      <main class="ml-64 p-6 grid grid-cols-3 gap-6 w-full">
-        <!-- Card -->
-        <div class="bg-white rounded-lg shadow hover:scale-105 transition-transform overflow-hidden">
-          <img src="./assets/images/club1.jpg" alt="Discoteca" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-bold">Lux Club</h3>
-            <p class="text-gray-600 text-sm">Zona T, Bogotá</p>
+          <div>
+            <span class="block font-semibold">#2 Palco VIP</span>
+            <div class="w-full bg-purple-900 rounded-full h-2.5 mt-1">
+              <div class="bg-green-400 h-2.5 rounded-full" style="width: 65%;"></div>
+            </div>
+          </div>
+    
+          <div>
+            <span class="block font-semibold">#3 360 Rooftop</span>
+            <div class="w-full bg-purple-900 rounded-full h-2.5 mt-1">
+              <div class="bg-green-400 h-2.5 rounded-full" style="width: 40%;"></div>
+            </div>
           </div>
         </div>
+      </aside>
     
-        <!-- Puedes duplicar más cards aquí -->
-    
+      <!-- Cards -->
+      <main class="ml-64 p-6 grid grid-cols-3 gap-6 w-full bg-gray-900">
+        <!-- Aquí van las cards -->
       </main>
     </div>
     
