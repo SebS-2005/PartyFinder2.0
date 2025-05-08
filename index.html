@@ -1,129 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PartyFinder 🎉</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pedido de Comida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white ">
+<body>
 
- 
+    <div class="container">
+        <h2>Formulario de Pedido de Comida</h2>
+        <form action="/ruta-del-servidor" method="POST">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-  <!-- Main -->
-  <!-- Main -->
-<div class="flex-1 flex flex-col">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
 
+            <label for="telefono">Teléfono de Contacto:</label>
+            <input type="tel" id="telefono" name="telefono" required>
 
-    <!-- Header -->
-    <header class="bg-purple-900 p-4 flex justify-between items-center shadow-md fixed w-full z-10">
-      <!-- Izquierda: logo y nombre -->
-      <div class="flex items-center space-x-3">
-        <img src="./assets/images/icons/logo.png" alt="Logo" class="w-10 h-10">
-        <h1 class="text-2xl font-bold">PartyFinder</h1>
-      </div>
-    
-      <!-- Derecha: navegación -->
-      <nav class="flex items-center space-x-6">
-        <a href="#" class="text-white hover:text-purple-300 font-medium">Inicio</a>
-        <a href="#" class="text-white hover:text-purple-300 font-medium">Buscar</a>
-        <!-- Botón perfil -->
-        <button class="w-10 h-10 rounded-full overflow-hidden border-2 border-white">
-          <img src="./assets/images/profile.png" alt="Perfil" class="object-cover w-full h-full">
-        </button>
-      </nav>
-    </header>
+            <label for="producto">Selecciona tu Comida:</label>
+            <select id="producto" name="producto" required>
+                <option value="hamburguesa">Hamburguesa</option>
+                <option value="pizza">Pizza</option>
+                <option value="ensalada">Ensalada</option>
+                <option value="pasta">Pasta</option>
+            </select>
 
-    <div class="flex pt-16 h-screen">
-      <!-- Sidebar -->
-      <aside class="w-64 bg-purple-800 text-white p-4 h-full sticky top-16">
-        <h2 class="text-xl font-bold mb-4">Categorías</h2>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-purple-300">Electrónica</a></li>
-          <li><a href="#" class="hover:text-purple-300">Latina</a></li>
-          <li><a href="#" class="hover:text-purple-300">Reggaetón</a></li>
-        </ul>
-    
-        <h2 class="text-xl font-bold mt-6 mb-4">Ranking</h2>
-        <div class="space-y-4">
-          <!-- Ranking con barras -->
-          <div>
-            <span class="block font-semibold">#1 Lux Club</span>
-            <div class="w-full bg-purple-900 rounded-full h-2.5 mt-1">
-              <div class="bg-green-400 h-2.5 rounded-full" style="width: 90%;"></div>
-            </div>
-          </div>
-    
-          <div>
-            <span class="block font-semibold">#2 Palco VIP</span>
-            <div class="w-full bg-purple-900 rounded-full h-2.5 mt-1">
-              <div class="bg-green-400 h-2.5 rounded-full" style="width: 65%;"></div>
-            </div>
-          </div>
-    
-          <div>
-            <span class="block font-semibold">#3 360 Rooftop</span>
-            <div class="w-full bg-purple-900 rounded-full h-2.5 mt-1">
-              <div class="bg-green-400 h-2.5 rounded-full" style="width: 40%;"></div>
-            </div>
-          </div>
-        </div>
-      </aside>
-    
-      <!-- Cards -->
-      <main class="ml-64 p-6 grid grid-cols-3 gap-6 w-full bg-gray-900">
-        <div class="bg-white rounded-lg shadow hover:scale-105 transition-transform overflow-hidden">
-          <img src="./assets/images/club1.jpg" alt="Discoteca" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-bold">Lux Club</h3>
-            <p class="text-gray-600 text-sm">Zona T, Bogotá</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow hover:scale-105 transition-transform overflow-hidden">
-          <img src="./assets/images/club1.jpg" alt="Discoteca" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-bold">Lux Club</h3>
-            <p class="text-gray-600 text-sm">Zona T, Bogotá</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow hover:scale-105 transition-transform overflow-hidden">
-          <img src="./assets/images/club1.jpg" alt="Discoteca" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-bold">Lux Club</h3>
-            <p class="text-gray-600 text-sm">Zona T, Bogotá</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow hover:scale-105 transition-transform overflow-hidden">
-          <img src="./assets/images/club1.jpg" alt="Discoteca" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-bold">Lux Club</h3>
-            <p class="text-gray-600 text-sm">Zona T, Bogotá</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow hover:scale-105 transition-transform overflow-hidden">
-          <img src="./assets/images/club1.jpg" alt="Discoteca" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-bold">Lux Club</h3>
-            <p class="text-gray-600 text-sm">Zona T, Bogotá</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow hover:scale-105 transition-transform overflow-hidden">
-          <img src="./assets/images/club1.jpg" alt="Discoteca" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-bold">Lux Club</h3>
-            <p class="text-gray-600 text-sm">Zona T, Bogotá</p>
-          </div>
-        </div>
-      </main>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+
+            <label for="direccion">Dirección de Entrega:</label>
+            <textarea id="direccion" name="direccion" rows="4" required></textarea>
+
+            <button type="submit">Realizar Pedido</button>
+        </form>
     </div>
-    
-
-  </div>
-
-  <!-- Scripts -->
-  <script src="./js/cards.js"></script>
-  <script src="./js/ranking.js"></script>
 
 </body>
 </html>
