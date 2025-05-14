@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Party Finder - Login</title>
     <link rel="stylesheet" href="css/startpagestyle.css">
+    <link rel="stylesheet" href="css/startpagestyle.css">
     <body>
     <div class="container">
         <div class="phones-container">
@@ -52,10 +53,26 @@
                 </div>
             </div>
         </div>
-        <div class="login-container">
-            <!-- Aquí puedes integrar tu formulario de login ya existente -->
-            <h2>Iniciar Sesión</h2>
-            <p>Coloca aquí tu formulario de login existente</p>
+          <div class="wrapper">
+        <div class="form-wrapper sing-in">
+            <form action="coneccion.php" method="post">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" name="username" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox"> Recordarme</label>
+                </div>
+                <button type="submit" name="blogin">Login</button>
+                <div class="singup-link">
+                    <p>¿No tienes una cuenta? <a href="#" class="singupbtn-link">Sign Up</a></p>
+                </div>
+            </form>
         </div>
     </div>
 
