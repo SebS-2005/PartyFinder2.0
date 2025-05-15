@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Party Finder - Login</title>
     <link rel="stylesheet" href="css/startpagestyle.css">
+    <link rel="stylesheet" href="css/signup.css">
     
     <body>
     <div class="container">
@@ -37,8 +38,8 @@
                             </a>
                         </div>
                         <div class="action-buttons">
-                            <a href="#" class="action-button">INICIAR SESIÓN</a>
-                            <a href="#" class="action-button">REGISTRARSE</a>
+                            <a href="signup.html" class="action-button">REGISTRARSE</a>
+                            
                         </div>
                         <div class="age-restriction">EDAD +18</div>
                     </div>
@@ -53,7 +54,8 @@
                 </div>
             </div>
         </div>
-          <div class="wrapper">
+    </div>    
+    <div class="wrapper">
         <div class="form-wrapper sing-in">
             <form action="coneccion.php" method="post">
                 <h2>Login</h2>
@@ -75,27 +77,5 @@
             </form>
         </div>
     </div>
-
-    <script>
-        // Función para cargar imágenes en los teléfonos
-        function loadPhoneImages(frontImageUrl, backImageUrl) {
-            const frontScreen = document.querySelector('.phone-front .screen-content');
-            const backScreen = document.querySelector('.phone-back .screen-content');
-            
-            if (frontImageUrl) {
-                frontScreen.style.backgroundImage = `url('${frontImageUrl}')`;
-            }
-            
-            if (backImageUrl) {
-                backScreen.style.backgroundImage = `url('${backImageUrl}')`;
-            }
-        }
-        
-        // Ejemplo de uso:
-        // loadPhoneImages('url-imagen-frontal.jpg', 'url-imagen-trasera.jpg');
-        
-        // Para implementar en producción, puedes llamar a esta función
-        // con las URLs de tus imágenes reales
-    </script>
 </body>
 </html>
