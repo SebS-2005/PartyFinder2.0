@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PartyFinder | Dashboard</title>
-  <link rel="stylesheet" href="css/partyfinder.css">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/partyfinder.css">
 </head>
 <body>
-  <aside class="sidebar">
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="PartyFinder Logo">
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-glass-martini-alt"></i>
+                </div>
+                <div class="logo-text">Party Finder</div>
+            </div>
+        </div>
+        
+        <a class="nav-item">
+            <div class="nav-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="nav-text">Dashboard</div>
+        </a>
+        
+        <a class="nav-item">
+            <div class="nav-icon">
+                <i class="fas fa-clipboard-list"></i>
+            </div>
+            <div class="nav-text">Orders</div>
+        </a>
+        
+        <a class="nav-item active">
+            <div class="nav-icon">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="nav-text">Schedule</div>
+        </a>
+        
+        <a class="nav-item">
+            <div class="nav-icon">
+                <i class="fas fa-comment"></i>
+            </div>
+            <div class="nav-text">Messages</div>
+        </a>
+        
+        <a class="nav-item">
+            <div class="nav-icon">
+                <i class="fas fa-sliders-h"></i>
+            </div>
+            <div class="nav-text">Settings</div>
+        </a>
+        
+        <a class="nav-item">
+            <div class="nav-icon">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="nav-text">Analytics</div>
+        </a>
+        
+        <div class="profile">
+            <div class="profile-pic">
+                <img src="/api/placeholder/40/40" alt="User profile">
+            </div>
+            <div class="profile-info">
+                <div class="profile-name">User Name</div>
+                <div class="profile-status">Cuenta Free</div>
+            </div>
+        </div>
     </div>
-    <nav class="nav">
-      <a href="#"><i class="ph-house"></i><span>Inicio</span></a>
-      <a href="#"><i class="ph-calendar"></i><span>Eventos</span></a>
-      <a href="#"><i class="ph-chat-teardrop-dots"></i><span>Mensajes</span></a>
-      <a href="#"><i class="ph-user"></i><span>Perfil</span></a>
-      <a href="#"><i class="ph-gear"></i><span>Configuración</span></a>
-    </nav>
-    <div class="user">
-      <img src="assets/images/perfil.jpg" alt="Avatar">
+    
+    <div class="main-content">
+        <h1>Bienvenido a Party Finder</h1>
     </div>
-  </aside>
-  <main class="content">
-    <!-- tu contenido aquí -->
-  </main>
 </body>
 </html>
