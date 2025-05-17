@@ -1,5 +1,18 @@
 
 
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #141414;
+            color: white;
+            overflow-x: hidden;
+        }
+       
         .sidebar {
             width: 75px;
             background-color: white;
@@ -182,22 +195,7 @@
             bottom: -7px;
             left: 50%;
             transform: translateX(-50%);
-        }
-
-         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #141414;
-            color: white;
-            overflow-x: hidden;
-        }
-       
-        
+        }        
 
         /* Sección de carrusel */
         .section-title {
