@@ -1,6 +1,4 @@
-
-
-          * {
+ * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -10,7 +8,8 @@
         body {
             background-color: #141414;
             color: white;
-            overflow-x: hidden;
+            overflow: hidden; /* Cambiado de overflow-x a overflow para evitar scroll en todo el body */
+            display: flex; /* Añadido display flex para la estructura principal */
         }
        
         .sidebar {
@@ -22,7 +21,10 @@
             display: flex;
             flex-direction: column;
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
+            position: fixed; /* Cambiado a fixed para mantenerlo fijo */
+            left: 0;
+            top: 0;
+            z-index: 100;
         }
 
         .sidebar:hover {
@@ -147,6 +149,21 @@
         .profile-status {
             font-size: 12px;
             color: #888;
+        }
+
+        /* Contenedor principal para el contenido */
+        .main-container {
+            flex: 1;
+            margin-left: 75px; /* Ancho inicial de la sidebar */
+            overflow-y: auto; /* Solo este contenedor tendrá scroll vertical */
+            height: 100vh;
+            padding: 20px;
+            transition: margin-left 0.3s ease; /* Para que se ajuste cuando la sidebar cambie de tamaño */
+        }
+
+        /* Ajuste cuando la sidebar se expande */
+        .sidebar:hover + .main-container {
+            margin-left: 250px;
         }
 
         .main-content {
