@@ -1041,6 +1041,17 @@
     }
 }
 
+ @media (max-width: 768px) {
+            .venue-header {
+                height: 50vh;
+                min-height: 300px;
+            }
+            
+            .venue-header-content {
+                padding: 20px;
+            }
+        }
+
 /* Móvil (480px) */
 @media (max-width: 480px) {
     .venue-title {
