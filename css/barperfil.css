@@ -1,5 +1,21 @@
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
         
+
+ body {
+    overflow-x: hidden; /* Elimina el scroll horizontal no deseado */
+    width: 100%; /* Asegura que el body ocupe el ancho completo */
+}
+
+.main-container {
+    width: 100%;
+    max-width: 100vw; /* Limita el ancho al viewport */
+    overflow-x: hidden; /* Previene desbordamiento */
+}
+
+.content-wrapper {
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding no sume ancho */
+}
         * {
             margin: 0;
             padding: 0;
@@ -225,6 +241,8 @@
             transition: margin-left 0.3s ease;
             scrollbar-width: thin;
             scrollbar-color: #5271ff #111111;
+            margin-left: 75px; 
+            width: calc(100% - 75px);
         }
         
         .main-container::-webkit-scrollbar {
@@ -1011,4 +1029,27 @@
             transition: opacity 0.3s ease;
         }
         
-        
+@media (max-width: 768px) {
+    .venue-info-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+    .venue-sidebar {
+        margin-top: 30px; /* Espacio entre secciones */
+    }
+    .venue-header-content {
+        flex-direction: column; /* Apila título y rating */
+    }
+}
+
+/* Móvil (480px) */
+@media (max-width: 480px) {
+    .venue-title {
+        font-size: 1.8rem; /* Texto más pequeño */
+    }
+    .venue-details {
+        grid-template-columns: 1fr; /* Una columna para detalles */
+    }
+    .events-list {
+        grid-template-columns: 1fr; /* Eventos en columna */
+    }
+}
