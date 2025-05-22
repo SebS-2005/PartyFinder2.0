@@ -6,7 +6,8 @@
         }
 
         body {
-            background-color: #141414;
+            background: #3F5EFB;
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(89, 55, 240, 1) 11%, rgba(13, 49, 105, 1) 81%, rgba(66, 19, 42, 1) 100%, rgba(252, 70, 107, 1) 100%);
             color: white;
             overflow: hidden; /* Cambiado de overflow-x a overflow para evitar scroll en todo el body */
             display: flex; /* Añadido display flex para la estructura principal */
@@ -15,6 +16,7 @@
         .sidebar {
             width: 75px;
             background-color: white;
+            color: black;
             height: 100vh;
             transition: width 0.3s ease;
             overflow: hidden;
