@@ -298,7 +298,7 @@ Estilos del formulario
     box-shadow: 0 0 50px #0ef;
     border-radius: 20px;
     overflow: hidden;
-    margin: 30px auto;
+    margin: 10px auto;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -321,22 +321,8 @@ Estilos del formulario
     height: 100%;
     transition: 1s ease-in-out;
     padding: 20px;
-    margin-right: 200px;
 }
 
-.wrapper.active .form-wrapper.sing-in {
-    transform: translateY(-450px);
-}
-
-.wrapper .form-wrapper.sing-up {
-    position: absolute;
-    top: 450px;
-    left: 0;
-}
-
-.wrapper.active .form-wrapper.sing-up {
-    transform: translateY(-450px);
-}
 
 h2 {
     font-size: clamp(24px, 5vw, 30px);
