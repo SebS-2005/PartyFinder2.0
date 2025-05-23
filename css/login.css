@@ -8,6 +8,7 @@
 body {
     margin: 0;
     padding: 0;
+    padding-right: 40px;
     font-family: 'Arial', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -271,7 +272,6 @@ Estilos del formulario
     border-radius: 20px;
     overflow: hidden;
     margin: 30px auto;
-    margin-right: 200px;
     padding: 20px;
     box-sizing: border-box;
 }
