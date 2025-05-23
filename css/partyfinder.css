@@ -189,9 +189,15 @@ body {
 .profile {
     margin-top: auto;
     padding: 15px 20px;
+    border-top: 1px solid rgba(82, 113, 255, 0.1);
+}
+
+.profile-link {
     display: flex;
     align-items: center;
-    border-top: 1px solid rgba(82, 113, 255, 0.1);
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
 }
 
 .profile-pic {
@@ -205,7 +211,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.profile-pic:hover {
+.profile-link:hover .profile-pic {
     transform: scale(1.1);
 }
 
@@ -231,6 +237,11 @@ body {
     font-weight: 600;
     font-size: 14px;
     color: white;
+    transition: color 0.3s ease;
+}
+
+.profile-link:hover .profile-name {
+    color: #00FFFF;
 }
 
 .profile-status {
@@ -249,6 +260,7 @@ body {
     background: linear-gradient(90deg, #00FFFF, transparent);
     animation: statusUnderline 2s infinite;
 }
+
 
 @keyframes statusUnderline {
     0% { width: 0%; left: 0; }
