@@ -271,7 +271,16 @@
     50% { width: 100%; left: 0; }
     100% { width: 0%; left: 100%; }
 }
+main-container {
+    margin-left: 75px; /* Igual al ancho del sidebar cerrado */
+    transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: calc(100% - 75px);
+}
 
+.sidebar:hover ~ .main-container {
+    margin-left: 250px; /* Igual al ancho del sidebar abierto */
+    width: calc(100% - 250px);
+}
         /* HEADER DEL ESTABLECIMIENTO - MODIFICADO PARA LOCALES */
         .venue-header {
             position: relative;
