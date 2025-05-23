@@ -479,19 +479,25 @@ body {
     animation: fadeIn 0.8s ease-out 0.2s both;
 }
 
-.featured-card {
+.featured-card-link {
+    display: block;
     width: 80%;
     max-width: 700px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.featured-card {
+    width: 100%;
     height: 300px;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    cursor: pointer;
 }
 
-.featured-card:hover {
+.featured-card-link:hover .featured-card {
     transform: translateY(-15px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
 }
@@ -503,7 +509,7 @@ body {
     transition: transform 0.5s ease;
 }
 
-.featured-card:hover img {
+.featured-card-link:hover .featured-card img {
     transform: scale(1.1);
 }
 
@@ -527,7 +533,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.featured-card:hover .featured-title {
+.featured-card-link:hover .featured-title {
     transform: translateX(10px);
 }
 
@@ -563,7 +569,7 @@ body {
     transition: transform 0.3s ease 0.1s;
 }
 
-.featured-card:hover .featured-desc {
+.featured-card-link:hover .featured-desc {
     transform: translateX(15px);
 }
 
@@ -584,6 +590,11 @@ body {
 @keyframes badgeFloat {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* EFECTOS DE NEÓN MEJORADOS */
